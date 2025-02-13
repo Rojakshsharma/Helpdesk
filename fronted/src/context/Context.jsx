@@ -2,7 +2,7 @@ import { createContext} from "react";
 
 export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
-    const url =  "http://localhost:8000/api"
+    const url =  import.meta.env.VITE_API_URL
   
     const value = {url}
     

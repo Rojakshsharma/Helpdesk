@@ -8,7 +8,7 @@ function Agent() {
   const { url } = useContext(UserContext);
   const getTicketList = async () => {
     try {
-      const response = await axios.get(`${url}/ticket/list`);
+      const response = await axios.get(`${url}/api/ticket/list`);
   
       if (response.data.success) {
         setData(response.data.ticket);

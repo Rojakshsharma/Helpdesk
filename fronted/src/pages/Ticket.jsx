@@ -25,7 +25,7 @@ function Ticket({firstname,lastname,email}) {
 
     const submitHanlder = async () => {
       try {
-        const response = await axios.post(`${url}/ticket/add`,ticket)
+        const response = await axios.post(`${url}/api/ticket/add`,ticket)
         toast.success("Ticket Created Successfully")
         navigate('/tickets', { state: { ...ticket } })
       } catch (error) {

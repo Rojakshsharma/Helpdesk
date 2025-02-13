@@ -8,7 +8,7 @@ function ManageProfiles() {
     const [data,setData] = useState([])
     
     const userListHanlder = async ()=>{
-        const response = await axios.get(`${url}/user/list`)
+        const response = await axios.get(`${url}/api/user/list`)
         if(response.data.success){
             setData(response.data.users)
         }
@@ -18,7 +18,7 @@ function ManageProfiles() {
     }
 
     const userDeleteHanlder = async (email)=>{
-        const response = await axios.post(`${url}/user/delete`,{email})
+        const response = await axios.post(`${url}/api/user/delete`,{email})
         console.log(response)
         console.log(response.data)
         if(response.data.success){

@@ -26,7 +26,7 @@ function User() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${url}/user/add`, data)
+      const response = await axios.post(`${url}/api/user/add`, data)
       if((await response).data.success){
         toast.success("Profile is created")
         navigate("/profile", { state: data });
